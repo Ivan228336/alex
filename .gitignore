@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Сборка и дистрибутивы
+build/
+dist/
+*.exe
+*.apk
+*.zip
+*.spec
+*.pkg
+*.pyz
+
+# Логи и отчёты
+*.log
+nuitka-crash-report.xml

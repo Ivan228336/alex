@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Score Overlay</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #333; /* Темный фон, чтобы видеть прозрачность */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <img id="scoreImage" src="http://127.0.0.1:8000/get_score" alt="Tennis Score">
+
+    <script>
+        const imgElement = document.getElementById('scoreImage');
+        const url = 'http://127.0.0.1:8000/get_score';
+
+        setInterval(() => {
+            // Добавляем текущее время в миллисекундах, чтобы "обмануть" кэш браузера
+            imgElement.src = url + '?t=' + new Date().getTime();
+        }, 500); // 500 мс = 0.5 сек (2 раза в секунду)
+    </script>
+
+</body>
+</html>

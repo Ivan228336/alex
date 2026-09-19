@@ -62,6 +62,8 @@ if __name__ == "__main__":
     # image.close()
     if sys.platform == 'win32':
         asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+        import os
+        os.system('')
 
     for file in media_dir.glob('tennis_score*'):
         file.unlink()
